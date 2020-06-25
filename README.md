@@ -68,7 +68,7 @@ function computeRemainder(a, b) {
 };
 ```
 
-##range
+## range
 
 _Prompt:_
 
@@ -92,7 +92,7 @@ function range(a, b) {
 };
 ```
 
-##reverseUpcaseString
+## reverseUpcaseString
 
 _Prompt:_
 
@@ -110,7 +110,7 @@ function reverseUpcaseString(str) {
 };
 ```
 
-##charCount
+## charCount
 
 _Prompt:_
 
