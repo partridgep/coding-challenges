@@ -339,7 +339,54 @@ function reduceArray(arr, fn, acc) {
 }
 ```
 
+### flatten
 
+*Prompt:*
+
+- Write a function named flatten that accepts a single array that may contain nested arrays and returns a new "flattened" array.
+- A flattened array is an array that contains no nested arrays.
+- Arrays maybe nested at any level.
+- If any of the arrays have duplicate values those duplicate values should be present in the returned array.
+- The values in the new array should maintain their ordering as shown in the examples below.
+
+_My solution:_
+
+```
+function flatten(arr) {
+  if (!arr.length) {
+    let arr2 = [];
+    arr = [...arr2];
+    }
+  for (i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      arr = [...arr.slice(0, i), ...arr[i], ...arr.slice(i + 1, arr.length)];
+      flatten(arr[i]);
+    } else {
+      arr = [...arr]
+    }
+  }
+  return arr;
+}
+```
+
+### isPrime
+
+*Prompt:*
+
+- Write a function named isPrime that returns true when the integer argument passed to it is a prime number and false when the argument passed to it is not prime.
+- A prime number is a whole number (integer) greater than 1 that is evenly divisible by only itself.
+
+_My solution:_
+
+```
+function isPrime(int) {
+  if (int < 2 || Math.ceil(int) !== int) return false;
+  for (i = 2; i < int - 1; i++) {
+    if (int % i === 0) return false;
+  }
+  return true;
+}
+```
 
 
 
